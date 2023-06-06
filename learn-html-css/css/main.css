@@ -12,6 +12,8 @@ body {
     margin: 0 auto;
 }
 
+/*nav bar styling*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -37,11 +39,86 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a.active:before{
+nav ul li a.active:before {
     position: absolute;
     content: "";
     width: 35%;
     height: 1px;
     border-bottom: 2px solid black;
     bottom: -5px;
+}
+
+/*main section*/
+
+main {
+    display: flex; /* to set the items horizontally */
+    gap: 8em; /* to set the space between both the columns */
+    margin-top: 11em; /* to separate from the heading */
+}
+
+
+.left-col {
+    width: 45%; /* the layout at left side takes approx 45% of the space */
+}
+
+.right-col {
+    flex-grow: 1; /* to take the entire width for the div and not just width of the content */
+}
+
+h1.main-heading {
+    font-size: 5.2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal; /* to not let the font be bolder which is by default */
+    margin: 0; /* to remove the margin around this h1 text */
+}
+
+p.sub-heading {
+    font-size: 1.8rem;
+}
+
+.cta-buttons {
+    margin: 5em 0;
+}
+
+.cta-buttons, .secondary-cta { /* elements of both containers needs to be horizontal with gap of 2em */
+    display: flex;
+    gap: 2em;
+}
+
+
+.primary-cta {
+    background-color: #F1E2D1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.secondary-cta {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block; /* to make sure the words don't wrap */
+    padding: 1em 0;
+    align-items: center;
+}
+
+.secondary-cta svg {
+    width: 20px;
+}
+
+.news {
+    display: flex;
+    gap: 2em;
+}
+
+.employees {
+    font-size: 3.0rem;
+    margin: 0;
+}
+
+.details {
+    align-items: center;
 }
